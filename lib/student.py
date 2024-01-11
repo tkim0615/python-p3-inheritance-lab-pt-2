@@ -1,12 +1,8 @@
 class Student:
-    def hello(self):      
+    def hello(self):
         print("Hey there! I'm so excited to learn stuff.")
     def raise_hand(self):
-        print("Pick me!")
-
-
-
-import ipdb
+        print('Pick me!')
 
 
 
@@ -14,10 +10,11 @@ class ChattyStudent(Student):
     def hello(self):
         super().hello()
         print("How are you doing today? I'm okay, but I'm kind of tired. Did you watch The Walking Dead last night? You didn't?! Oh man, it was so crazy! What, you don't want any spoilers? Okay well let me just tell you who died...")
-    
     def raise_hand(self):
-        i = 0
-        while i < 10:
+        for num in range(0, 10):
             super().raise_hand()
-            i +=1
-        
+
+
+student1 = Student()
+chatty1 = ChattyStudent()
+print(chatty1.raise_hand())
